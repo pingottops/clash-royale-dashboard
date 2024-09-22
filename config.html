@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Painel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Configurações do Painel</h1>
+        
+        <form id="config-form">
+            <div class="form-group">
+                <label for="token">Token de Autenticação</label>
+                <input type="text" class="form-control" id="token" required>
+            </div>
+            <div class="form-group">
+                <label for="clan_tag">Tag do Clã</label>
+                <input type="text" class="form-control" id="clan_tag" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+        </form>
+
+        <div class="mt-3">
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">Voltar ao Painel</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Participantes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-primary" onclick="window.location.href='config.html'">Configurações</button>
+        <h1 class="text-center">Painel de Participantes do Clã</h1>
+        
+        <div class="alert alert-warning text-center" id="stats">
+            <!-- Contagem de jogadores ativos, que não jogaram hoje, e que usaram 2 decks será injetada aqui -->
+        </div>
+
+        <form id="filter-form" class="form-inline justify-content-center mb-4">
+            <input type="text" id="name-filter" class="form-control mr-2" placeholder="Filtrar por Nome">
+            <input type="number" id="fame-filter" class="form-control mr-2" placeholder="Mínimo de Fama">
+            <input type="number" id="decks-used-today-filter" class="form-control mr-2" placeholder="Decks Usados Hoje">
+            <button type="submit" class="btn btn-primary mr-2">Aplicar Filtros</button>
+            <button type="button" class="btn btn-secondary" onclick="clearFilters()">Limpar Filtros</button>
+        </form>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Nome</th>
+                    <th>Fama</th>
+                    <th>Pontos de Reparação</th>
+                    <th>Ataques de Barco</th>
+                    <th>Decks Usados</th>
+                    <th>Decks Usados Hoje</th>
+                </tr>
+            </thead>
+            <tbody id="participants-body">
+                <!-- Dados dos participantes serão injetados aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
